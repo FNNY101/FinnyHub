@@ -1,0 +1,95 @@
+local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
+local Window = Library.CreateLib("FinnyHub", "DarkTheme")
+
+--Main
+local Main = Window:NewTab("Main")
+local MainSection = Main:NewSection("Main")
+
+MainSection:NewButton("Infinate Yield", "Admin Cammands", function()
+    loadstring(game:HttpGet('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'))()
+end)
+
+
+MainSection:NewButton("Fly Script", "Be able to fly", function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/XNEOFF/FlyGuiV3/main/FlyGuiV3.txt"))()
+end)
+
+MainSection:NewToggle("Human SuperPowers", "SuperSpeed and SuperJump", function(state)
+    if state then
+        game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 120
+        game.Players.LocalPlayer.Character.Humanoid.JumpPower = 120
+    else
+        game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 16
+        game.Players.LocalPlayer.Character.Humanoid.JumpPower = 50
+    end
+end)
+
+--Player scripts
+local PlayerScripts = Window:NewTab("PlayerScripts")
+local PlayerScriptsSection = PlayerScripts:NewSection("PlayerScripts")
+
+
+PlayerScriptsSection:NewSlider("SuperSpeed", "SuperSpeed", 750, 16, function(s) -- 750 (MaxValue) | 16 (MinValue)
+    game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = s
+end)
+
+PlayerScriptsSection:NewSlider("SuperJump", "SuperJump", 750, 50, function(s) -- 750 (MaxValue) | 16 (MinValue)
+    game.Players.LocalPlayer.Character.Humanoid.JumpPower = s
+end)
+
+--Blox fruit Scripts
+local BloxFruits = Window:NewTab("BloxFruits")
+local BloxFruitsSection = BloxFruits:NewSection("BloxFruits")
+
+BloxFruitsSection:NewButton("MukoroHub(keyed)", "One of the best blox fruits script", function()
+    loadstring(game:HttpGet"https://raw.githubusercontent.com/xDepressionx/Free-Script/main/AllScript.lua")()
+end)
+
+BloxFruitsSection:NewButton("MangoHub", "BloxFruitsScript", function()
+    getgenv().WaterMark = true
+    loadstring(game:HttpGet("https://gitlab.com/L1ZOT/mango-hub/-/raw/main/Mango-Bloxf-Fruits-Beta"))()
+end)
+
+BloxFruitsSection:NewButton("SpeedHub-X", "BloxFruitsScript", function()
+    getgenv().WaterMark = true
+    loadstring(game:HttpGet("https://gitlab.com/L1ZOT/mango-hub/-/raw/main/Mango-Bloxf-Fruits-Beta"))()
+end)
+
+BloxFruitsSection:NewButton("Neva Hub", "BloxFruitsScript", function()
+    loadstring(game:HttpGet('https://raw.githubusercontent.com/VEZ2/NEVAHUB/main/2'))()
+end)
+
+BloxFruitsSection:NewButton("Domadic hub", "BloxFruitsScript", function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/Domadicoof/Domadicoof/main/Domadichub/NottoGay/Start.ranscript"))()
+end)
+
+--Arsenal scripts
+local Arsenal = Window:NewTab("Arsenal")
+local ArsenalSection = Arsenal:NewSection("Arsenal")
+
+ArsenalSection:NewButton("ThunderClient", "ArsenalScript", function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/DuhwahScripts/ArsenalBoltsHub/main/source"))()
+end)
+
+ArsenalSection:NewButton("OwlHub", "ArsenalScript", function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/CriShoux/OwlHub/master/OwlHub.txt"))();
+end)
+
+
+--badBuisnessScripts
+local BadBuisness = Window:NewTab("BadBuisness")
+local BadBuisnessSection = BadBuisness:NewSection("BadBuisness")
+
+
+BadBuisnessSection:NewButton("AlphaZero", "BadBuisnessScript", function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/Sw1ndlerScripts/AlphaZero/main/Loader.lua"))()
+end)
+
+--NicosNextBotsScripts
+local NicosNextBots = Window:NewTab("NicosNextBots")
+local NicosNextBotsSection = NicosNextBots:NewSection("NicosNextBots")
+
+
+NicosNextBotsSection:NewButton("Darkrai-x", "NicoNextBotsScript", function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/GamingScripter/Darkrai-X/main/Games/NicoNextBots"))()
+end)
